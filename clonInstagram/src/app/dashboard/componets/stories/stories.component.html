@@ -1,0 +1,13 @@
+<ion-header [hidden]="hideStories" >
+  <ion-toolbar>
+    <div class="stories-container">
+      <div class="story-item" *ngFor="let story of stories; let index = index">
+        <div class="story-avatar" [ngClass]="{'user-story': story.isUser}">
+          <img [src]="story.image" alt="avatar" />
+          <div *ngIf="story.isUser" class="add-story">+</div>
+        </div>
+        <p>{{ story.username }}</p>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>

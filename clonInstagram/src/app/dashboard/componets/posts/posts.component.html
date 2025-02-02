@@ -1,0 +1,45 @@
+<ion-content>
+  <ion-list>
+    <ng-container *ngIf="posts && posts.length">
+      <div *ngFor="let post of posts" class="post-container">
+        <ion-item class="post-header">
+          <ion-avatar slot="start">
+            <ion-img *ngIf="post.userImage" [src]="post.userImage" alt="User Avatar"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ post.username }}</h2>
+            <p>{{ post.location }}</p>
+          </ion-label>
+          <ion-button fill="clear">
+            <ion-icon name="ellipsis-horizontal" color="dark"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <ion-img *ngIf="post.image" [src]="post.image" alt="Post Image" class="post-image"></ion-img>
+
+        <ion-item class="post-actions">
+          <ion-button fill="clear">
+            <ion-icon name="heart-outline" color="dark"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear">
+            <ion-icon name="chatbubble-outline" color="dark"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear">
+            <ion-icon name="paper-plane-outline" color="dark"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" slot="end">
+            <ion-icon name="bookmark-outline" color="dark"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <ion-item class="post-details">
+          <ion-label>
+            <p><strong>{{ post.likes }} likes</strong></p>
+            <p><strong>{{ post.username }}</strong> {{ post.caption }}</p>
+            <p class="timestamp">{{ post.timeAgo }}</p>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ng-container>
+  </ion-list>
+</ion-content>

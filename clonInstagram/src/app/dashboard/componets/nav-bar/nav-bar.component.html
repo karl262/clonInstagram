@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-title>Instagram</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="navigateTo('/notifications')">
+        <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" (click)="navigateTo('/messages')">
+        <ion-icon slot="icon-only" name="chatbubble-outline"></ion-icon>
+        <ion-badge color="danger" class="notification-badge">1</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

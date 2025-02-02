@@ -1,0 +1,40 @@
+.post-container {
+  width: 100%;
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.post-actions ion-button {
+  font-size: 22px;
+}
+
+.post-details {
+  padding: 5px 10px;
+}
+
+.timestamp {
+  color: gray;
+  font-size: 12px;
+  margin-top: 5px;
+}

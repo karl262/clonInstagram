@@ -1,0 +1,58 @@
+.stories-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  scrollbar-width: none;
+}
+
+.stories-container::-webkit-scrollbar {
+  display: none;
+}
+
+.story-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.story-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4) padding-box,
+  linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4) border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.story-avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.user-story {
+  position: relative;
+}
+
+.add-story {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white;
+  color: #ff3b30;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #ff3b30;
+}
