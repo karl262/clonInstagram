@@ -1,5 +1,7 @@
 {
-  "name": "ionic-app-base",
-  "integrations": {},
+  "name": "clonInstagram",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
