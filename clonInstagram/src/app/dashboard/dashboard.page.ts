@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.page.scss']
 })
 export class DashboardPage implements OnInit {
+  hideStories = false
 
   constructor() { }
 
   ngOnInit() {
+  }
+  onScroll(event: any) {
+    this.hideStories = event.detail.scrollTop > 50;
   }
 
 }

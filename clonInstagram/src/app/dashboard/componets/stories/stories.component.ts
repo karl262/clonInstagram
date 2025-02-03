@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
 import {InfiniteScrollCustomEvent, IonContent} from "@ionic/angular";
 
@@ -10,8 +10,8 @@ import {InfiniteScrollCustomEvent, IonContent} from "@ionic/angular";
 })
 export class StoriesComponent  implements OnInit {
 
+  @Input() hideStories = false;
   @ViewChild(IonContent, { static: false }) content!: IonContent;
-  hideStories = false;
   stories: { username: string, image: string, isUser?: boolean }[] = [];
   posts: { content: string }[] = [];
 

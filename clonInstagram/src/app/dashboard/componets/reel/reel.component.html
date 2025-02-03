@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true" class="reel-container">
+  <!-- Contenedor del Reel -->
+  <div class="reel">
+    <!-- Video -->
+    <video #videoPlayer autoplay loop muted playsinline (click)="togglePlayPause()">
+      <source [src]="reel.videoUrl" type="video/mp4">
+    </video>
+
+    <!-- Barra superior transparente -->
+    <div class="reel-header">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/dashboard"></ion-back-button>
+      </ion-buttons>
+      <span>Reels</span>
+      <ion-icon name="camera-outline" slot="end"></ion-icon>
+    </div>
+
+    <div class="reel-actions">
+      <ion-button fill="clear" (click)="toggleLike()">
+        <ion-icon [name]="reel.isLiked ? 'heart' : 'heart-outline'" [class.liked]="reel.isLiked"></ion-icon>
+        <p>{{ reel.likes }}</p>
+      </ion-button>
+      <ion-button fill="clear">
+        <ion-icon name="chatbubble-outline"></ion-icon>
+        <p>{{ reel.comments }}</p>
+      </ion-button>
+      <ion-button fill="clear">
+        <ion-icon name="paper-plane-outline"></ion-icon>
+        <p>{{ reel.shares }}</p>
+      </ion-button>
+    </div>
+
+    <div class="reel-info">
+      <ion-avatar>
+        <img [src]="reel.userAvatar" alt="User Avatar">
+      </ion-avatar>
+      <div>
+        <h3>{{ reel.username }}</h3>
+        <p>{{ reel.caption }}</p>
+      </div>
+      <ion-icon name="musical-notes-outline"></ion-icon>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,14 @@
+<ion-header class="reel-header mt-auto">
+  <ion-toolbar>
+    <ion-title>Reels</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="reels-container">
+  <div class="reel-wrapper" *ngFor="let reel of reels; let i = index">
+    <app-reel [reel]="reel" [index]="i" (likeEvent)="toggleLike(i)" (playPauseEvent)="togglePlayPause(i)"></app-reel>
+  </div>
+</ion-content>
+
+
+<app-footer/>

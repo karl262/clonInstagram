@@ -5,6 +5,7 @@ import {NavBarComponent} from "./nav-bar/nav-bar.component.";
 import {FooterComponent} from "./footer/footer.component";
 import {PostsComponent} from "./posts/posts.component";
 import {StoriesComponent} from "./stories/stories.component";
+import {ReelComponent} from "./reel/reel.component";
 
 
 
@@ -13,7 +14,8 @@ import {StoriesComponent} from "./stories/stories.component";
     NavBarComponent,
     FooterComponent,
     PostsComponent,
-    StoriesComponent
+    StoriesComponent,
+    ReelComponent
   ],
   imports: [
     IonicModule,
@@ -23,7 +25,8 @@ import {StoriesComponent} from "./stories/stories.component";
     NavBarComponent,
     FooterComponent,
     PostsComponent,
-    StoriesComponent
+    StoriesComponent,
+    ReelComponent
   ]
 })
 export class ComponentsModule { }
